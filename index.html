@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clinic AI | WhatsApp booking assistant for clinics</title>
+<meta name="description" content="Clinic AI helps clinics take appointment bookings, send reminders and hand conversations to staff, all inside WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='43' font-size='34' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --ink: #0f172a;
+    --muted: #475569;
+    --line: #e2e8f0;
+    --bg: #ffffff;
+    --soft: #f1f5f9;
+    --brand: #0f766e;
+    --brand-dark: #115e59;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  a { color: var(--brand); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  header { border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); }
+  .logo span { color: var(--brand); }
+  nav a { margin-left: 20px; text-decoration: none; color: var(--muted); font-size: 0.95rem; }
+  nav a:hover { color: var(--ink); }
+  .hero { padding: 72px 0 56px; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.15; margin: 0 0 16px; letter-spacing: -0.02em; max-width: 18ch; }
+  .hero p { font-size: 1.15rem; color: var(--muted); max-width: 60ch; margin: 0 0 28px; }
+  .btn { display: inline-block; background: var(--brand); color: #fff; padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 600; }
+  .btn:hover { background: var(--brand-dark); }
+  section { padding: 48px 0; }
+  section.alt { background: var(--soft); }
+  h2 { font-size: 1.6rem; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .lead { color: var(--muted); margin: 0 0 28px; max-width: 62ch; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+  .card { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+  .steps { counter-reset: s; display: grid; gap: 14px; padding: 0; margin: 0; list-style: none; }
+  .steps li { counter-increment: s; display: flex; gap: 14px; align-items: flex-start; }
+  .steps li::before {
+    content: counter(s);
+    flex: 0 0 32px; height: 32px; border-radius: 50%;
+    background: var(--brand); color: #fff; font-weight: 700;
+    display: grid; place-items: center;
+  }
+  .steps strong { display: block; }
+  .steps span { color: var(--muted); font-size: 0.97rem; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 0.88rem; }
+  footer p { margin: 0 0 8px; }
+  @media (max-width: 560px) {
+    nav a { margin-left: 12px; font-size: 0.9rem; }
+    .hero { padding: 48px 0 36px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Clinic <span>AI</span></a>
+    <nav>
+      <a href="#features">What it does</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <h1>Clinic appointments, handled on WhatsApp.</h1>
+    <p>Clinic AI is a software service that helps clinics take appointment bookings, send reminders and confirmations, and pass conversations to clinic staff when a person is needed.</p>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+
+  <section class="alt" id="features">
+    <div class="wrap">
+      <h2>What it does</h2>
+      <p class="lead">Patients message the clinic on WhatsApp. Clinic AI answers common requests and keeps the clinic's schedule in order.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Appointment booking</h3>
+          <p>Patients can ask for a time, and the booking is recorded in the clinic's schedule.</p>
+        </div>
+        <div class="card">
+          <h3>Reminders and confirmations</h3>
+          <p>Upcoming appointments are reminded in advance, and patients can confirm or cancel with a reply.</p>
+        </div>
+        <div class="card">
+          <h3>Hand-off to staff</h3>
+          <p>When a patient needs a person, or raises an urgent concern, the conversation is passed to clinic staff.</p>
+        </div>
+        <div class="card">
+          <h3>Built for many clinics</h3>
+          <p>Each clinic's patients and appointments are kept separate from every other clinic's.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="lead">No new app for patients. They keep using WhatsApp.</p>
+      <ol class="steps">
+        <li><div><strong>A patient writes to the clinic</strong><span>Through the clinic's WhatsApp number.</span></div></li>
+        <li><div><strong>Clinic AI replies</strong><span>It handles bookings, changes and reminders, following the clinic's own working hours and services.</span></div></li>
+        <li><div><strong>Staff stay in control</strong><span>Anything sensitive or unclear is handed to the clinic team.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="alt" id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="lead">Want to know whether Clinic AI fits your clinic? Write to us.</p>
+      <p><strong>Email:</strong> <a href="mailto:melameer952@gmail.com">melameer952@gmail.com</a></p>
+      <p><strong>Location:</strong> Egypt</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Clinic AI. All rights reserved.</p>
+    <p>WhatsApp is a trademark of Meta Platforms, Inc. Clinic AI is an independent service and is not affiliated with or endorsed by Meta or WhatsApp.</p>
+  </div>
+</footer>
+
+</body>
+</html>
